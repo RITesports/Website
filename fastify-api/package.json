@@ -7,7 +7,7 @@
     "lint": "eslint --ext .ts ./src"
   },
   "dependencies": {
-    "@typegoose/typegoose": "8.3.0",
+    "@typegoose/typegoose": "9.0.1",
     "apollo-server-core": "3.3.0",
     "apollo-server-fastify": "3.3.0",
     "bcrypt": "5.0.1",
