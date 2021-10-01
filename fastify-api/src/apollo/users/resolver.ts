@@ -1,5 +1,5 @@
 import { /* ApolloError, */ UserInputError } from 'apollo-server-fastify';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 // import { IsEmail, Matches, MinLength } from 'class-validator';
 import {
   Arg,

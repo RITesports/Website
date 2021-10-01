@@ -1,5 +1,5 @@
 import { getModelForClass, pre, prop } from '@typegoose/typegoose';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { Types } from 'mongoose';
 import { Field, ObjectType } from 'type-graphql';
 
