@@ -1,5 +1,5 @@
 # --- Dependencies --- #
-FROM node:14 AS deps
+FROM node:14-alpine AS deps
 WORKDIR /next-app
 
 COPY package*.json ./
@@ -7,7 +7,7 @@ COPY package*.json ./
 RUN npm ci
 
 # --- Build --- #
-FROM node:14 AS builder
+FROM node:14-alpine AS builder
 WORKDIR /next-app
 
 COPY . ./
@@ -17,7 +17,7 @@ COPY --from=deps next-app/node_modules/ node_modules/
 RUN npm run build
 
 # --- Run --- #
-FROM node:14 AS runner
+FROM node:14-alpine AS runner
 WORKDIR /next-app
 
 COPY public/ public/
