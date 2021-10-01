@@ -13,7 +13,7 @@ import connectToDB from './mongoose';
   const app = createApp();
   const server = await createServer(app);
 
-  const url = await app.listen(4000, process.env.NODE_ENV === 'production' ? '0.0.0.0' : undefined);
+  const url = await app.listen(4000, '0.0.0.0');
   console.log(`🐅 Fastify Server ready at: ${url}`);
   console.log(`🚀 Apollo Server ready at: ${url}${server.graphqlPath}`);
 })();

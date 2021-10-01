@@ -1,0 +1,6 @@
+# Cookie private key
+cookie_private.pem
+
+# jwt private / public keys
+jwt_private.pem
+jwt_public.pem
