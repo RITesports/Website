@@ -28,7 +28,7 @@ services:
       - api
 
   api:
-    build: ritesports/fastify-api:main
+    image: ritesports/fastify-api:main
     environment:
       - NODE_ENV=production
       # - MONGO_USERNAME=
