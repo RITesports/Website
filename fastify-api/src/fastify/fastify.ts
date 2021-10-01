@@ -11,7 +11,7 @@ const createApp = () => {
 
   // Apollo Sandbox doesn't work with CSP, disable in dev
   app.register(helmet, { contentSecurityPolicy: process.env.NODE_ENV === 'production' });
-  app.register(cookie, { secret: fs.readFileSync(process.env.NODE_ENV === 'production' ? '/run/secrets/cookie_private' : 'cookie_private.pem', 'utf8') });
+  app.register(cookie, { secret: fs.readFileSync('/run/secrets/cookie_private', 'utf8') });
   app.register(formbody);
 
   app.register(cookieJwt, {
@@ -22,8 +22,8 @@ const createApp = () => {
     },
     jwt: {
       algorithm: 'RS256',
-      secretOrPublicKey: fs.readFileSync(process.env.NODE_ENV === 'production' ? '/run/secrets/jwt_public' : 'jwt_public.pem', 'utf8'),
-      secretOrPrivateKey: fs.readFileSync(process.env.NODE_ENV === 'production' ? '/run/secrets/jwt_private' : 'jwt_private.pem', 'utf8'),
+      secretOrPublicKey: fs.readFileSync('/run/secrets/jwt_public', 'utf8'),
+      secretOrPrivateKey: fs.readFileSync('/run/secrets/jwt_private', 'utf8'),
     },
   });
 
