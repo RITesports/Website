@@ -29,14 +29,3 @@ jobs:
 
       - name: Run linter
         run: cd ${{matrix.path}}/ && npm run lint
-
-  Build:
-    name: Build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Build Docker images
-        run: docker-compose build
