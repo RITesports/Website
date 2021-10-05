@@ -4,7 +4,8 @@
     "dev": "ts-node-dev --poll --respawn ./src",
     "build": "tsc",
     "start": "node build/index.js",
-    "lint": "eslint --ext .ts ./src"
+    "lint": "eslint --ext .ts ./src",
+    "test": "tsc --noEmit"
   },
   "dependencies": {
     "@typegoose/typegoose": "8.3.0",
