@@ -11,7 +11,7 @@ import {
   Resolver,
 } from 'type-graphql';
 
-import Context from '../context';
+import type Context from '../context';
 import User, { Users } from './user';
 
 @InputType()
